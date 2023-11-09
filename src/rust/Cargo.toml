@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+  "arcpbf",
+  "esripbf"
+]
+
+resolver = "2"
