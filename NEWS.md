@@ -1,3 +1,9 @@
+# arcpbf 0.1.4
+
+* Addresses MSRV requirement by replacing `std::cell::OnceCell` with `once_cell::sync::OnceCell`
+* Fix parsing of dates and small integers 
+* Add minimal integration tests with `{arcgislayers}`
+
 # arcpbf 0.1.3
 
 * Closes https://github.com/R-ArcGIS/arcpbf/issues/2
