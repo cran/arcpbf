@@ -1,6 +1,6 @@
-7248e33bcdc11c646c23e0c80ee71743 *DESCRIPTION
+ee869bc25952e1fd72652cf22c8bda47 *DESCRIPTION
 eb3a85b21b09e707ffef212149d8fa81 *NAMESPACE
-be96641f68fe77b8589038982d03c756 *NEWS.md
+8573fde49975c54d121421ce514db65f *NEWS.md
 38efdc7242ef64c9ec65005d1580c7c5 *R/extendr-wrappers.R
 1463eca8f36568c0876c856bc6661ad8 *R/post-process.R
 e6a8e51fb230c4688e080d9056159548 *R/read.R
@@ -39,8 +39,4 @@ e9601f3c60eee4f2bb96c8a7b63358fb *src/rust/arcpbf/src/process.rs
 574c686bb04a848425342fa8bee85dbb *src/rust/esripbf/src/lib.rs
 d4c7febd30951f7fbd584476dbb2dd70 *src/rust/vendor-config.toml
 caa948606b10b4d7c056b5ddb2dd7252 *src/rust/vendor.tar.xz
-f6fd8777d6a8525afd44d1a1c1550288 *tests/testthat.R
-9bb95659f971decccc2fb6058d35628a *tests/testthat/_snaps/resps.md
-92b0af31900ae6c74642455e04bdd2a8 *tests/testthat/test-integration.R
-cf46a3ea77899cd5cb6c284a2d2a7938 *tests/testthat/test-resps.R
 4b7d2f97c407377684aa35d16aa025c0 *tools/msrv.R

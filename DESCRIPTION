@@ -1,6 +1,6 @@
 Package: arcpbf
 Title: Process ArcGIS Protocol Buffer FeatureCollections
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: 
     person("Josiah", "Parry", , "josiah.parry@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9910-865X"))
@@ -18,8 +18,8 @@ Suggests: httr2, sf, testthat (>= 3.0.0)
 Imports: arcgisutils (>= 0.3.0), rlang
 Config/testthat/edition: 3
 NeedsCompilation: yes
-Packaged: 2024-09-05 14:46:10 UTC; josiahparry
+Packaged: 2024-09-30 22:57:39 UTC; josiahparry
 Author: Josiah Parry [aut, cre] (<https://orcid.org/0000-0001-9910-865X>)
 Maintainer: Josiah Parry <josiah.parry@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-09-17 16:00:02 UTC
+Date/Publication: 2024-10-01 07:50:02 UTC
