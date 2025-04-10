@@ -1,3 +1,9 @@
+# arcpbf 0.1.7
+
+* Handles missing CRS and closes <https://github.com/R-ArcGIS/arcpbf/issues/11> h/t @elipousson for reporting
+* Returns warning message when `esriFieldBlob` is encountered <https://github.com/R-ArcGIS/arcpbf/issues/6>
+* Fixes bug where an error occured when a query returned no rows <https://github.com/R-ArcGIS/arcpbf/issues/8>
+
 # arcpbf 0.1.6
 
 * Adds `tests/` to `.Rbuildignore` to pass CRAN checks

@@ -1,6 +1,6 @@
 Package: arcpbf
 Title: Process ArcGIS Protocol Buffer FeatureCollections
-Version: 0.1.6
+Version: 0.1.7
 Authors@R: 
     person("Josiah", "Parry", , "josiah.parry@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9910-865X"))
@@ -11,15 +11,16 @@ URL: https://r.esri.com/arcpbf/, https://github.com/R-ArcGIS/arcpbf
 BugReports: https://github.com/R-ArcGIS/arcpbf/issues
 Encoding: UTF-8
 Language: en
-RoxygenNote: 7.2.3
-Config/rextendr/version: 0.3.1.9000
+RoxygenNote: 7.3.2
+Config/rextendr/version: 0.3.1.9001
 SystemRequirements: Cargo (Rust's package manager), rustc >= 1.70
 Suggests: httr2, sf, testthat (>= 3.0.0)
 Imports: arcgisutils (>= 0.3.0), rlang
 Config/testthat/edition: 3
+Depends: R (>= 4.2)
 NeedsCompilation: yes
-Packaged: 2024-09-30 22:57:39 UTC; josiahparry
+Packaged: 2025-04-10 20:37:05 UTC; josiahparry
 Author: Josiah Parry [aut, cre] (<https://orcid.org/0000-0001-9910-865X>)
 Maintainer: Josiah Parry <josiah.parry@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-10-01 07:50:02 UTC
+Date/Publication: 2025-04-10 21:20:02 UTC

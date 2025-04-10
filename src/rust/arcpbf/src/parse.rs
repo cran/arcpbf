@@ -130,6 +130,26 @@ pub fn parse_spatial_ref(x: SpatialReference) -> List {
     )
 }
 
+pub fn parse_blob(x: Vec<Value>) -> Robj {
+    x.into_iter()
+        .map(|xi| match xi.value_type {
+            Some(v) => match v {
+                ValueType::StringValue(v) => v.into_robj(),
+                ValueType::FloatValue(v) => v.into_robj(),
+                ValueType::DoubleValue(v) => v.into_robj(),
+                ValueType::SintValue(v) => v.into_robj(),
+                ValueType::UintValue(v) => v.into_robj(),
+                ValueType::Int64Value(v) => v.into_robj(),
+                ValueType::Uint64Value(v) => v.into_robj(),
+                ValueType::Sint64Value(v) => v.into_robj(),
+                ValueType::BoolValue(v) => v.into_robj(),
+            },
+            None => ().into_robj(),
+        })
+        .collect::<List>()
+        .into()
+}
+
 // map field type to parser
 pub fn field_type_robj_mapper(fi: &FieldType) -> fn(Vec<Value>) -> Robj {
     match fi {
@@ -141,11 +161,11 @@ pub fn field_type_robj_mapper(fi: &FieldType) -> fn(Vec<Value>) -> Robj {
         FieldType::EsriFieldTypeGuid => |x| parse_strings(x).into_robj(),
         FieldType::EsriFieldTypeOid => |x| parse_big_ints(x).into_robj(),
         FieldType::EsriFieldTypeDate => |x| parse_date(x),
-        // FieldType::EsriFieldTypeXml => todo!(),
         FieldType::EsriFieldTypeGlobalId => |x| parse_strings(x).into_robj(),
-        // FieldType::EsriFieldTypeRaster => todo!(),
-        // FieldType::EsriFieldTypeBlob => todo!(),
-        // FieldType::EsriFieldTypeGeometry => todo!(),
-        _ => todo!(),
+        FieldType::EsriFieldTypeBlob => |x| parse_blob(x),
+        _ => |x| {
+            eprintln!("This field type is not supported.\nPlease report an issue at https://github.com/R-ArcGIS/arcpbf/issues\nProvide the FeatureService URL if possible");
+            List::new(x.len()).into_robj()
+        },
     }
 }
